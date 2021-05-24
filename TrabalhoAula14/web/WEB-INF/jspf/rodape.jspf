@@ -1,0 +1,7 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page import="br.edu.fatecpg.web.User"%>
+<%@page import="br.edu.fatecpg.web.Database"%>
+<%@ page pageEncoding="UTF-8" %>
+<hr/>
+<div align="center">Desenvolvido por <b>Paloma Ierardi Avelino</b></div>
+<div align="center">Ra: <b>1290482012025</b></div>
