@@ -17,7 +17,7 @@ import javax.servlet.ServletContextListener;
  */
 public class DbListener implements ServletContextListener {
     public static final String CLASS_NAME = "org.sqlite.JDBC";
-    public static final String URL = "jdbc:sqlite:myfin.db";
+    public static final String URL = "jdbc:sqlite:p2.db";
     
     public static String step = null;
     public static Exception exception = null;
@@ -48,10 +48,10 @@ public class DbListener implements ServletContextListener {
                     + "VALUES('Administrador', 'admin', '"+("1234".hashCode())+"', 'ADMIN')";
                 stmt.execute(sql);
                 sql = "INSERT INTO users(name, login, password_hash, role) "
-                    + "VALUES('Richard', 'richard', '"+("1234".hashCode())+"', 'USER')";
+                    + "VALUES('Paloma Ierardi', 'paloma', '"+("1234".hashCode())+"', 'USER')";
                 stmt.execute(sql); 
             }
-                step = "Criando tabela de disciplinas ";
+            step = "Criando tabela de disciplinas ";
             sql = "CREATE TABLE IF NOT EXISTS disciplinas("
                     + "nome VARCHAR(50) PRIMARY KEY,"
                     + "diadasemana VARCHAR(200) NOT NULL,"
@@ -61,6 +61,8 @@ public class DbListener implements ServletContextListener {
                     + "notap2 double NOT NULL,"
                     + ")";
             stmt.execute(sql);
+           
+                
             
             //TODO: implementar código de criação das outras tabelas
             stmt.close();
