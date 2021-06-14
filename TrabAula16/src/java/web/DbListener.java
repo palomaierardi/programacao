@@ -49,7 +49,7 @@ public class DbListener implements ServletContextListener {
                 stmt.execute(sql);
                 sql = "INSERT INTO users(name, login, password_hash, role) "
                     + "VALUES('Paloma Ierardi', 'paloma', '"+("1234".hashCode())+"', 'USER')";
-                stmt.execute(sql);
+                stmt.execute(sql); 
             }
                 
             
